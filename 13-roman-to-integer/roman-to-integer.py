@@ -6,7 +6,7 @@ class Solution:
         n=len(s)
 
         for i in range(n):
-            if i+1<n and romans[s[i+1]]>romans[s[i]]:
+            if i+1<n and romans[s[i]]<romans[s[i+1]]:
                 total-= romans[s[i]]
             else:
                 total+= romans[s[i]]
