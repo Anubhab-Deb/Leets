@@ -4,7 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        digits=[int(d) for d in str(n)] 
-        srt=sorted(digits)
-        p= srt[-1]*srt[-2] 
-        return p
+        digits=sorted(int(d) for d in str(n))
+        return digits[-1]*digits[-2]
+        
