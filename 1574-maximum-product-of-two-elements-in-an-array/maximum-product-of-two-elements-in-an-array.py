@@ -4,9 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        prod=0
-        l=len(nums)
-        for i in range(l):
-            for j in range(i+1,l):
-                prod=max(prod,(nums[i]-1)*(nums[j]-1))
-        return prod
+        nums.sort()
+        return (nums[-1]-1)*(nums[-2]-1)
