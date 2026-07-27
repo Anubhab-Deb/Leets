@@ -4,5 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
-        return (nums[-1]-1)*(nums[-2]-1)
+        first=second=0
+        for i in nums:
+            if i>=first:
+                second=first
+                first=i
+            elif i>second:
+                second=i
+        return (first-1)*(second-1)
