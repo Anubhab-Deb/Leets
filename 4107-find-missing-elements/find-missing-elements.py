@@ -6,7 +6,7 @@ class Solution(object):
         """
         nums.sort()
         abs=[]
-        for i in range(nums[0], nums[-1]+1):
-            if i not in nums:
-                abs.append(i)
+        for i in range(len(nums)-1):
+            for j in range(nums[i]+1, nums[i+1]):
+                abs.append(j)
         return abs
